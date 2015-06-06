@@ -1,0 +1,149 @@
+<dialog class="card" id="addStcok">
+			<div class="dialogTitle" >Add a stock to your wallet</div>
+				<form>
+	    			<div class="group">      
+						<input type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Stock Name</label>
+	    			</div>
+				</form>
+			</div>
+			
+			<div>
+				<button class="flat" id="add">Add</button> 				 
+				<button class="flat" id="cancel">Cancel</button> 
+			</div>
+</dialog>
+		
+		
+		
+		
+dialog.card  {
+border: none;
+margin: 0 auto;
+padding: 16px;
+width: 200px;
+height: 200px;
+display: flex;
+flex-direction: column;
+	
+}
+
+.dialogTitle {
+	color: black;
+	font-size: 1.2em;
+	padding: 5px;
+	font-weight: 500;
+}
+
+button.flat {
+	display: inline-block;
+      position: relative;
+      width: 90px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      font-size: 1em;
+      background-color: #fff;
+      color: #3F51B5;	
+      float: right;
+      border: none;
+      font-weight: 400;
+      bottom 50px;
+}
+
+#cancel {
+	color: #727272;
+}
+
+.group 			  { 
+  position:relative; 
+  margin-bottom:45px; 
+  flex-grow: 1;
+}
+input 				{
+  font-size:18px;
+  padding:25px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+  
+}
+
+input:focus 		{ outline:none; }
+
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:25px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label 		{
+  top:-5px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+form{
+	flex-grow: 1;
+}
+
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+

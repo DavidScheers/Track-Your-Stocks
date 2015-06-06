@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Stock Tracker</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+	<header>
+ 		 <h1>Stock Tracker</h1>
+ 		 <p id="demo">Login</p>
+ 	</header>
+    
+    <nav>
+    	<ul class="menu">
+    		<li href="about.html">Wallet</li>
+    		<li>About</li>
+    	</ul>
+    </nav>
+	
+	
+	<main>
+		<template id="myTemplate">
+			<div class="cardinfo">
+				<div class="title"></div>
+				<div class="value">€<span></span></div>
+			</div>
+			<div class="cardcontent"> </div>
+		</template>	
+		<dialog class="card" id="addStock">
+			<div>
+				<div class="dialogTitle">Add a stock to your wallet</div>
+				<form>
+	    			<div class="group">      
+						<input type="text" required />
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Stock Name</label>
+	    			</div>
+				
+				
+					<div>
+						<button type="submit" class="flat" id="add">Add</button> 				 
+						<button class="flat" id="cancel">Cancel</button> 
+					</div>
+				</form>
+			</div>
+		</dialog>	
+	</main>
+	
+			
+   	<section id="footer">
+  			<div>Made by David Scheers</div>
+  			<div>Donate: BE40 6105 9745 9063</div>
+  		
+  			<button id="addDialog" class="fab"> 
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+   					<path d="M19 13h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z"/>
+   				</svg>
+			</button>
+  		
+  	</section>	
+ 
+  <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
