@@ -344,5 +344,13 @@ input:focus ~ .highlight {
   to 	{ width:0; background:transparent; }
 }
 
+a:link {
+	text-decoration: none;
+	color: black;
+}
 
+a:visited {
+	text-decoration: none;
+	color: black;
+}
 
